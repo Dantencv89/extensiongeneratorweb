@@ -1,0 +1,31 @@
+{
+  "name": "extensiongeneratorweb",
+  "version": "1.0.0",
+  "description": "Extension Generator Qlik from web",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dantencv89/extensiongeneratorweb.git"
+  },
+  "keywords": [
+    "Qlik",
+    "Generator",
+    "MongoDB",
+    "AngularJS"
+  ],
+  "author": "Nacho Carreno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dantencv89/extensiongeneratorweb/issues"
+  },
+  "homepage": "https://github.com/Dantencv89/extensiongeneratorweb#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.5.4",
+    "mongoose": "^5.9.3",
+    "nodemon": "^2.0.2"
+  }
+}
