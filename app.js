@@ -3,6 +3,7 @@ const router = express.Router()
 const app = express()
 const path = require('path');
 const port = 3000
+const url = 'localhost'
 
 
 // middleware that is specific to this router
@@ -11,7 +12,8 @@ router
         console.log('Time: ', Date.now());
     next()})
     .get('/', (req, res) =>{
-        res.sendFile(path.join(__dirname + '/webapp/index.html'));
+        
+        res.redirect(`http://${url}:${port}/webapp/index.html`);
     })
 
 
@@ -19,5 +21,5 @@ app.use('/webapp', express.static('webapp'))
 
 
 app.use('/', router)
-app.listen(port, () => console.log(`Example app listening on  http://www.localhost:${port}/!`))
+app.listen(port, () => console.log(`Example app listening on  http://www.${url}:${port}/!`))
 
