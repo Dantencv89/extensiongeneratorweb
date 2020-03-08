@@ -1,3 +1,18 @@
-<div>Hello {{firstName}} {{lastName}}</div>
+<div class="p-3">
+    <form class="row px-5" novalidate>
+      <div class="col-12">Dimensions</div>
+      <div class="col-3">Min:</div>
+      <input class="col-3" type="number" ng-model="extension.dimensions.min">
+      <div class="col-3">Max:</div>
+      <input class="col-3" type="number" ng-model="extension.dimensions.max">
+      <div class="col-12">Measures</div>
+      <div class="col-3">Min:</div>
+      <input class="col-3" type="number" ng-model="extension.measures.min">
+      <div class="col-3">Max:</div>
+      <input class="col-3" type="number" ng-model="extension.measures.max">
+    </form>
+  </div>
 
-<button ng-click="callPostMethod()">Post Function</button>
+<div  class="py-2 px-5">
+    <button  ng-click="callPostMethod()">Save Properties</button>
+</div>

@@ -1,8 +1,16 @@
 
 define([], function(){
     return function dbctrlController($scope,$http) {
-        $scope.firstName= "John";
-        $scope.lastName= "Doe";
+        $scope.extension={
+            dimensions:{
+                min:1,
+                max:1
+            },
+            measures:{
+                min:1,
+                max:1
+            }
+        }
 
 
         $scope.callPostMethod=function(){
@@ -10,7 +18,7 @@ define([], function(){
             $http({
                     "method":"POST",
                     "url": "http://localhost:3000/post",
-                    "data":{data: "hola mundo Selena"},
+                    "data":$scope.extension,
                     "Content-Type": "application/json"
                 })
                 .then((success)=>{
